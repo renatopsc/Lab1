@@ -3,12 +3,12 @@
 #include <iostream>
 
 //Assinatura das funções.
-float PerimetroPiramide(float base, float altura);
+float PerimetroTriangulo(float lado1, float lado2, float lado3);
 
 float PerimetroRetangulo(float base, float altura);
 
 float PerimetroQuadrado(float lado);
 
-float PerimetroCirculo(float raio);
+float PerimetroEsfera(float raio);
 
 #endif

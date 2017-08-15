@@ -10,6 +10,7 @@ using std::cin;
 using std::endl;
 
 #include <cmath>
+#include "calcula.h"
 #include "area.h"
 #include "perimetro.h"
 #include "volume.h"
@@ -45,43 +46,55 @@ int main() {
 }
 
 void menu(int opc){
-  float base, altura, lado, raio, aresta1, aresta2, aresta3;
+  float base, ab, altura, lado, lado1, lado2, lado3, raio, aresta1, aresta2, aresta3;
       switch (opc){
 		case 1:
 		  	cout << "Digite o tamanho da base do Triangulo:" << endl;
 		 	cin >> base;
 		  	cout << "Digite o tamanho da altura do triangulo:" << endl;
 		  	cin >> altura;
-			AreaTriangulo(base, altura);
+			cout << "Digite o lado 1 do Triangulo" << endl;
+			cin >> lado1;
+			cout << "Digite o lado 2 do Triangulo" << endl;
+			cin >> lado2;
+			cout << "Digite o lado 3 do Triangulo" << endl;
+			cin >> lado3;
+			calcAreaTriangulo(base, altura);
+			calcPerimetroTriangulo(lado1, lado2, lado3);
 		  break;
 		case 2:
 		  	cout << "Digite o tamanho da base do Retangulo:" << endl;
 		  	cin >> base;
 		 	cout << "Digite o tamanho da altura do Retangulo:" << endl;
 		  	cin >> altura;
-		  	AreaRetangulo(base, altura);
+		  	calcAreaRetangulo(base, altura);
+			calcPerimetroRetangulo(base, altura);
 		  break;
 		case 3:
 		  	cout << "Digite o tamanho do lado do Quadrado:" << endl;
 		  	cin >> lado;
-		  	AreaQuadrado(lado);
+		  	calcAreaQuadrado(lado);
+			calcPerimetroQuadrado(lado);
 		  break;
 		case 4:
 		  	cout << "Digite o tamanho do raio do Circulo:" << endl;
 		  	cin >> raio;
-		  	AreaCirculo(raio);
+			calcAreaCirculo(raio);
+			calcPerimetroEsfera(raio);
 		  break;
 		case 5:
 		  	cout << "Digite o tamanho da base do Piramide:" << endl;
-		  	cin >> base;
+		  	cin >> ab;
 		  	cout << "Digite o tamanho da altura do Piramide:" << endl;
 		  	cin >> altura;
-		  	AreaPiramide(base, altura);
+		  	calcAreaPiramide(ab, altura);
+			calcVolumePiramide(ab, altura);
 		  break;
 		case 6:
 		  	cout << "Digite o tamanho da aresta do cubo: " << endl;
 		  	cin >> lado;
-		  	AreaCubo(lado);
+			calcAreaCubo(lado);
+		  	calcVolumeCubo(lado);
 		  break;
 		case 7:
 		  	cout << "Digite o tamanho da largura do paralelepipedo: " << endl;
@@ -90,12 +103,14 @@ void menu(int opc){
 		  	cin >> aresta2;
 		  	cout << "Digite o tamanho do comprimento do paralelepipedo: " << endl;
 		  	cin >> aresta3;
-		  	AreaParalelepipedo(aresta1, aresta2, aresta3);
+		  	calcAreaParalelepipedo(aresta1, aresta2, aresta3);
+			calcVolumeParalelepipedo(aresta1, aresta2, aresta3);
 		  break;
 		case 8:
 		  	cout << "Digite o tamanho do raio da esfera: " << endl;
 		  	cin >> raio;
-		  	AreaEsfera(raio);		  
+		  	calcAreaEsfera(raio);	 
+			calcVolumeEsfera(raio); 
 		  break;
 		case 0:
 			exit(EXIT_SUCCESS);

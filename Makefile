@@ -31,13 +31,18 @@ debug: $(PROG)
 
 # Alvo (target) para a construcao do executavel
 # Define os arquivos *.o como dependencias
-$(PROG): $(OBJ_DIR)/area.o $(OBJ_DIR)/perimetro.o $(OBJ_DIR)/volume.o $(OBJ_DIR)/main.o
+$(PROG): $(OBJ_DIR)/calcula.o $(OBJ_DIR)/area.o $(OBJ_DIR)/perimetro.o $(OBJ_DIR)/volume.o $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 	@echo "+++ [Executavel 'LAB1' criado em $(BIN_DIR)] +++"
 	@echo "============="
+
+# Alvo (target) para a construcao do objeto calcula.o
+# Define os arquivos calcula.cpp e calcula.h como dependencias.
+$(OBJ_DIR)/calcula.o: $(SRC_DIR)/calcula.cpp $(INC_DIR)/calcula.h
+	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto area.o
 # Define os arquivos area.cpp e area.h como dependencias.
