@@ -2,7 +2,6 @@
 * @file area.cpp
 * @brief programa que Calcula Areas de figuras geometricas
 * @author Wanderson A. de Oliveira 
-* @date 09/03/2017
 */
 
 #include<iostream>
