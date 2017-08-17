@@ -7,10 +7,10 @@
  *@sa		Wanderson wanderson.alves@live.com
  */
 
-#include "../include/calcula.h"
-#include "../include/area.h"
-#include "../include/perimetro.h"
-#include "../include/volume.h"
+#include "../include/geometrica/calcula.h"
+#include "../include/geometrica/area.h"
+#include "../include/geometrica/perimetro.h"
+#include "../include/geometrica/volume.h"
 
 /**
  *@brief 	Chamada ao cálculo da área do triângulo

@@ -6,7 +6,7 @@
 
 #include <iostream>
 #include <cmath>
-#include "volume.h"
+#include "../include/geometrica/volume.h"
 #define PI 3.14
 
 /**

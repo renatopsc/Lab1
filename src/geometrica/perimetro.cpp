@@ -5,7 +5,7 @@
  */
 
 #include <iostream>
-#include "perimetro.h"
+#include "../include/geometrica/perimetro.h"
 #define PI 3.14
 
 /**

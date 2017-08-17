@@ -10,10 +10,11 @@ using std::cin;
 using std::endl;
 
 #include <cmath>
-#include "calcula.h"
-#include "area.h"
-#include "perimetro.h"
-#include "volume.h"
+#include <cstdlib> 
+#include "../include/geometrica/calcula.h"
+#include "../include/geometrica/area.h"
+#include "../include/geometrica/perimetro.h"
+#include "../include/geometrica/volume.h"
 
 // declaração da função calculadora
 void menu(int opc);
@@ -46,6 +47,7 @@ int main() {
 }
 
 void menu(int opc){
+  system("clear");
   float base, ab, altura, lado, lado1, lado2, lado3, raio, aresta1, aresta2, aresta3;
       switch (opc){
 		case 1:
@@ -117,4 +119,5 @@ void menu(int opc){
 		default:
 			cout << "Valor invalido!" << endl;	
 		}
+		cout << " " << endl;
 }	
